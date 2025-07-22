@@ -16,20 +16,31 @@ This project is built with the following goals:
 
 ---
 
-## 🏗️ Folder Structure
+## 🧰 Tech Stack
 
-LibraryManagementSystem/
-├── .vscode/ → VS Code build/run configurations
-├── bin/ → Compiled binaries
-├── src/ → Source code (C++)
-├── docs/ → Documentation per milestone
-│ ├── v1.0.md
-│ ├── v1.1.md
-│ └── uml/
-│ └── class-diagram.drawio
+- **Language**: C++17
+- **IDE**: Visual Studio Code
+- **Compiler**: MinGW-w64 g++ 15.1.0
+- **Version Control**: Git + GitHub
+- **Diagramming**: draw.io
+
+---
+
+## 🗂️ Folder Structure
+
+<pre>
+📁 LibraryManagementSystem/
+├── .vscode/              # VS Code build/run configs
+├── bin/                  # Compiled output
+├── src/                  # C++ source files
+├── docs/                 # Design notes per version
+│   ├── v1.0.md
+│   ├── v1.1.md
+│   └── uml/
+│       └── class-diagram.drawio
 ├── .gitignore
 └── README.md
-
+</pre>
 
 ---
 
@@ -44,15 +55,14 @@ LibraryManagementSystem/
 
 ---
 
-
 ## 🚧 Milestones & Versions
 
 | Version | Description | Tags | Docs | Status |
-|--------|-------------|------|------|--------|
-| **v0.9** | Identify core classes and draw UML | `UML`, `ClassDesign` | [docs/v0.9.md](docs/v0.9.md), [uml/class-diagram.drawio](docs/uml/class-diagram.drawio) | 🔜 In Progress |
+|---------|-------------|------|------|--------|
+| **v0.9** | Identify core classes and UML diagram | `UML`, `ClassDesign` | [docs/v0.9.md](docs/v0.9.md), [uml/class-diagram.drawio](docs/uml/class-diagram.drawio) | 🔜 In Progress |
 | **v1.0** | Working OOP-based code using class design | `OOP`, `Prototype` | [docs/v1.0.md](docs/v1.0.md) | 🔜 |
 | **v1.1** | Refactor using **SOLID principles** | `SOLID`, `Refactor` | [docs/v1.1.md](docs/v1.1.md) | 🔜 |
-| **v1.2** | Apply **Design Patterns** (e.g., Strategy, Factory) | `DesignPattern`, `BestPractices` | Planned | 🔜 |
+| **v1.2** | Apply **Design Patterns** (Strategy, Factory, etc.) | `DesignPattern`, `BestPractices` | Planned | 🔜 |
 | **v1.3** | Add validations, CLI UX, and modular error handling | `Robust`, `Maintainable` | Planned | 🔜 |
 | **v2.0** | Final public release with clean docs + Git tags | `Public`, `Documented` | Planned | 🔜 |
 
@@ -63,14 +73,14 @@ LibraryManagementSystem/
 | Task | Status | File |
 |------|--------|------|
 | Identify core entities & relationships | ✅ | – |
-| Create **UML Class Diagram** | 🔜 | [docs/v0.9.md](docs/v0.9.md), [uml/class-diagram.drawio](docs/uml/class-diagram.drawio) |
+| Create **UML Class Diagram** | 🔜 | [uml/class-diagram.drawio](docs/uml/class-diagram.drawio) |
 | Keep diagram updated with each refactor | 🔁 | As needed |
 
-> Use [draw.io](https://draw.io) or VS Code PlantUML extension for UML design
+> 💡 Use [draw.io](https://draw.io) or the PlantUML VS Code extension for creating/updating class diagrams.
 
 ---
 
-## 🧪 Feedback and Refactor Loop (Every Version)
+## 🔁 Feedback and Refactor Loop (Every Version)
 
 - ✅ Initial self-review (code clarity, modularity, naming)
 - ✅ Peer/GPT feedback
@@ -82,7 +92,7 @@ LibraryManagementSystem/
 
 ## 📁 Versioned Documentation
 
-Each major milestone will be documented separately in `docs/`. This helps keep the main README concise while preserving all learning notes.
+Each major milestone is documented in the `docs/` folder to preserve thought process, design notes, and review learnings.
 
 | Version | Document |
 |---------|----------|
@@ -90,21 +100,19 @@ Each major milestone will be documented separately in `docs/`. This helps keep t
 | v1.0    | [docs/v1.0.md](docs/v1.0.md) |
 | v1.1    | [docs/v1.1.md](docs/v1.1.md) |
 
-> 📝 GPT feedback, class design explanations, SOLID application reasoning, etc., in these files.
+> 📝 Design discussions, SOLID decisions, GPT feedback, etc., are included in these files.
 
 ---
 
 ## 🚀 How to Run
 
-Option 1 : run command every time
-
+### 🔹 Option 1: Manually compile and run
 ```bash
-g++ src/main.cpp -o bin/libraryApp && ./bin/libraryApp
-
+g++ -std=c++17 src/main.cpp -o bin/libraryApp && ./bin/libraryApp
 ```
-Option 2:
-
+### 🔹 Option 2: Use Build Task in VS Code
 📁 File: .vscode/tasks.json
+
 ```json
 {
   "version": "2.0.0",
@@ -127,7 +135,7 @@ Option 2:
   ]
 }
 ```
-🟢 Simply press Ctrl + Shift + B in VS Code to compile and run the project.
+Then press Ctrl + Shift + B in VS Code to compile and run.
 
 ---
 
@@ -144,17 +152,17 @@ Option 2:
 - [ ] Finalize for public GitHub push (v2.0)
 
 ---
+
 ## 👨‍💻 Author Notes
 
 This project is my hands-on journey to deeply understand **Low-Level Design (LLD)** in a practical, iterative way. I'm focusing on:
 
 - Writing code from scratch for real-world use cases
-- Facing the pain of vague requirements, design trade-offs, and naming dilemmas
+- Embracing the challenges of vague requirements, design trade-offs, and naming decisions
 - Applying feedback from peers and ChatGPT
-- Using **VS Code**, **Git/GitHub**, and **versioned iterations** to track design maturity
+- Using **VS Code**, **Git/GitHub**, and versioned iterations to track design maturity
 
-My goal isn’t just to “complete” the project — but to gradually evolve the code through **better design choices**, **solid architecture**, and **clean structure**, version by version.
+> 💡 My goal isn't just to complete the project, but to evolve it step-by-step through better design, architecture, and coding practices.
 
----
 
- 
+💡 My goal isn't just to complete the project, but to evolve it step-by-step through better design, architecture, and coding practices.
